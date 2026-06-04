@@ -273,6 +273,7 @@ const REGIONS = {
       {
         id: "egyptian-dental",
         title: "Egyptian Dental Care",
+        image: "https://upload.wikimedia.org/wikipedia/commons/7/74/Ancient_Egypt_Dentistry.jpg",
         timePeriod: "Ancient Egypt",
         ancientUse: "Surgically drilling through the mandibular bone to drain abscesses. Dental bridges to replace missing teeth.",
         historicalContext: "Main cause of dental problems: rough fibrous diet. Inorganic sand particles in bread heightened abrasiveness. Sand blown by wind mixed into staple food.",
