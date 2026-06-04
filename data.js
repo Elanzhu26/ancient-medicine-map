@@ -7,6 +7,7 @@ const REGIONS = {
       {
         id: "tcm-herbs",
         title: "TCM Herbs",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Insam_(ginseng).jpg/960px-Insam_(ginseng).jpg",
         timePeriod: "1600–1046 BC",
         ancientUse: "Based on the concept of Yin and Yang — cold-hot, female-male, inside-outside. Herbs, animal products, and minerals used in combination.",
         historicalContext: "Rooted in ancient belief that illness was caused by evil spirits or disrespecting ancestors. Supreme deity Shang Di governed celestial order.",
@@ -31,6 +32,7 @@ const REGIONS = {
       {
         id: "acupuncture",
         title: "Acupuncture",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Flickr_-_Official_U.S._Navy_Imagery_-_Cmdr._Yevsey_Goldberg_conducts_an_acupuncture_procedure..jpg/960px-Flickr_-_Official_U.S._Navy_Imagery_-_Cmdr._Yevsey_Goldberg_conducts_an_acupuncture_procedure..jpg",
         timePeriod: "Neolithic",
         ancientUse: "Activating specific acupoints on the patient's body. When fully activated, patients feel De Qi — soreness, numbness, fullness, or heaviness.",
         historicalContext: "Yang Jizhou described the full set of 365 acupoints.",
@@ -43,6 +45,7 @@ const REGIONS = {
       {
         id: "qigong",
         title: "Qi Gong / Dao Yin",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Jose_Luis_Melero_de_Frutos_(Chi_Kung).jpg/960px-Jose_Luis_Melero_de_Frutos_(Chi_Kung).jpg",
         timePeriod: "About 2146 BC",
         ancientUse: "Expiration and inspiration, body stretching, massaging, inner alchemy, sitting meditation.",
         historicalContext: "Dao Yin dredges inner passages for qi and blood circulation. Greatly influenced the Inner Canon of the Yellow Emperor.",
@@ -63,6 +66,7 @@ const REGIONS = {
       {
         id: "ayurveda",
         title: "Ayurveda",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Ayurveda_humors.svg/960px-Ayurveda_humors.svg.png",
         timePeriod: "2nd century BC",
         ancientUse: "Based on 5 cosmic elements (Air, Water, Space, Earth, Fire) forming 3 bodily humors (Tridoshas): Vata, Pitta, Kapha. Health relies on balanced Tridoshas.",
         historicalContext: "Foundations laid by Hindu philosophical schools Vaisheshika and Nyaya.",
@@ -75,6 +79,7 @@ const REGIONS = {
       {
         id: "siddha",
         title: "Siddha",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUYRwlgLWFPBuyiLy5m8lIf8frO_-koFPeqA&s",
         timePeriod: "Ancient India",
         ancientUse: "Holistic approach: medical practice, yogic practice, iatrochemistry, and wisdom. Five elements and three forces, eight methods of examination.",
         historicalContext: "Revolves around the intellectual, psychological, physical, and physiological aspects of all human beings.",
@@ -87,6 +92,7 @@ const REGIONS = {
       {
         id: "yoga",
         title: "Yoga",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Cartoon_Yoga_Expert_Man.svg/960px-Cartoon_Yoga_Expert_Man.svg.png",
         timePeriod: "2500 years ago",
         ancientUse: "First practiced only by religious ascetics focused on steadiness and stillness of the mind and consciousness.",
         historicalContext: "Traditional definitions focus on the mechanisms of the mind and how it can be stilled.",
@@ -99,6 +105,7 @@ const REGIONS = {
       {
         id: "homeopathy",
         title: "Homeopathy",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Cannab.jpg/960px-Cannab.jpg",
         timePeriod: "Mid 17th–18th centuries",
         ancientUse: "'Like cures like' — mild similar symptoms induced in healthy people can treat severe illness. Drug remedies sorted via the 'proving' method.",
         historicalContext: "Hahnemann self-tested with cinchona bark (quinine), triggering mild malaria-like symptoms.",
@@ -111,6 +118,7 @@ const REGIONS = {
       {
         id: "indian-herbs",
         title: "Indian Herbs (Ayurvedic)",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Curcuma_longa_roots.jpg/960px-Curcuma_longa_roots.jpg",
         timePeriod: "3000 years old",
         ancientUse: "Complex formulae of 30+ ingredients. Used as powders, capsules, teas, topicals, or raw. Based on belief that 'everything can be a drug'.",
         historicalContext: "~25,000 plant-based formulations used in traditional and folk medicines across India.",
@@ -131,6 +139,7 @@ const REGIONS = {
       {
         id: "enkoimesis",
         title: "Enkoimesis (Incubation Therapy)",
+        image: "https://www.the-tls.com/wp-content/uploads/2026/05/marble-relief-asclepius-hippocrates-treating-1079180670-e1778257290642.jpg",
         timePeriod: "Ancient Greece",
         ancientUse: "Therapeutic incubation at healing shrines of Asclepius and Amphiaraos. Ritual flow: physical and mental purification, bathing, sacrifice. Believers slept in a sacred chamber to receive healing divine dreams.",
         historicalContext: "Asclepius was worshipped as the God of medicine for over 1000 years. His sanctuaries (Asclepieia) were places of worship and healing.",
@@ -143,6 +152,7 @@ const REGIONS = {
       {
         id: "four-humors",
         title: "Four Humors & Bloodletting",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/BloodlettingPhoto_(cropped).jpg/960px-BloodlettingPhoto_(cropped).jpg",
         timePeriod: "Galen era (~2nd century AD)",
         ancientUse: "Blood, phlegm, yellow bile, and black bile — each linked to an organ, temperament, season, and element.",
         historicalContext: "Being too hot, cold, dry, or wet disturbed the balance between humors, causing disease. Physicians focused on reestablishing balance.",
@@ -155,6 +165,7 @@ const REGIONS = {
       {
         id: "sports-medicine",
         title: "Sports Medicine",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Bishop_Loughlin_Games_-_Armory_-_Track_%26_Field_(11609407975).jpg/960px-Bishop_Loughlin_Games_-_Armory_-_Track_%26_Field_(11609407975).jpg",
         timePeriod: "5th century BC (Herodicus)",
         ancientUse: "Therapeutic exercise for treatment of disease and maintenance of health. Recorded changes in daily body temperature with the first air thermometer. Measured pulse rate.",
         historicalContext: "Until the 2nd century AD, Galen became the first 'team doctor' for gladiators in Pergamum Kingdom.",
@@ -167,6 +178,7 @@ const REGIONS = {
       {
         id: "medical-astrology",
         title: "Medical Astrology",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Medical_Astrology-Man.jpg/960px-Medical_Astrology-Man.jpg",
         timePeriod: "Pre-16th century (Greek to Islamic world)",
         ancientUse: "Doctors used patients' zodiac signs for treatment guidance. Treatment decided by moon and star positions.",
         historicalContext: "Pre-Scientific Revolution worldview: no strict divide between heaven and earth. Celestial movements controlled earthly events.",
@@ -187,6 +199,7 @@ const REGIONS = {
       {
         id: "arabic-herbal",
         title: "Arabic Herbal Medicine (AHM)",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Myrrh_IMG_9777.JPG/960px-Myrrh_IMG_9777.JPG",
         timePeriod: "754 CE",
         ancientUse: "Natural remedies — organic (e.g. camel urine) and inorganic. Dosage forms: decoction, infusion, oil, juice, syrup, roasted materials, poultice, paste.",
         historicalContext: "Three stages: Greek works translated into Arabic → independent Arabian medical development → Arabic texts translated into Latin.",
@@ -199,6 +212,7 @@ const REGIONS = {
       {
         id: "unani",
         title: "Unani",
+        image: "https://ncismelectives.org/course_img/Unani-1-1671479804.jpeg",
         timePeriod: "Ancient (Greek-Arab origin)",
         ancientUse: "Dietotherapy (targeted meals), Organotherapy (healthy animal organs applied to treat diseased human organs), Pharmacotherapy. Unites spiritual, mental, and physical realms.",
         historicalContext: "7 vital physiological principles, 4 elements, 4 temperaments.",
@@ -211,6 +225,7 @@ const REGIONS = {
       {
         id: "essential-oil",
         title: "Essential Oils",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Using_Rosemary_Oil.jpg/960px-Using_Rosemary_Oil.jpg",
         timePeriod: "Since 4500 BC",
         ancientUse: "Ancient Egypt: religious rituals, cosmetics, embalming. Greece: used in baths and massages for pharmaceutical purposes.",
         historicalContext: "Distilled cedarwood oil used by Egyptians. Rose essence distillation refined by 11th century Persian scholar Ibn Sina.",
@@ -231,6 +246,7 @@ const REGIONS = {
       {
         id: "papyrus-ebers",
         title: "Papyrus Ebers (Medical Text)",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/G._Ebers_(ed.)%2C_Papyros_Ebers%2C_1875_Wellcome_L0016592.jpg/960px-G._Ebers_(ed.)%2C_Papyros_Ebers%2C_1875_Wellcome_L0016592.jpg",
         timePeriod: "1500 BCE",
         ancientUse: "Contains over 700 remedies and formulas for conditions ranging from burns and parasites to snake bites and mental disorders.",
         historicalContext: "Written in ancient Egypt around 1550 BCE. 110-page scroll, roughly 20 meters long. Copied from older Egyptian manuscripts.",
@@ -243,6 +259,7 @@ const REGIONS = {
       {
         id: "honey",
         title: "Honey / Apitherapy",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/BienenstichApisMelliferaMellifera.jpg/960px-BienenstichApisMelliferaMellifera.jpg",
         timePeriod: "3,000–5,000 years (China, Egypt, Greece)",
         ancientUse: "Using beehive products to prevent and treat disease. Documented by Hippocrates and Aristotle.",
         historicalContext: "Therapeutic benefits documented in the Bible, Vedas, and Quran.",
@@ -267,6 +284,7 @@ const REGIONS = {
       {
         id: "mummification",
         title: "Mummification (Anatomical Knowledge)",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Mummy_2.jpg/960px-Mummy_2.jpg",
         timePeriod: "Ancient Egypt",
         ancientUse: "Preservation of the body through mummification process, which generated extensive anatomical knowledge.",
         historicalContext: "The practice of mummification required detailed understanding of human organs and body systems.",
@@ -287,6 +305,7 @@ const REGIONS = {
       {
         id: "maya-herbalism",
         title: "Maya Herbalism",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Theobroma_cacao_MHNT.BOT.2004.0.204.jpg/960px-Theobroma_cacao_MHNT.BOT.2004.0.204.jpg",
         timePeriod: "250–900 AD, continued to present",
         ancientUse: "Yellow plants for jaundice, red for blood problems, burned feathers of red birds for yellow fever.",
         historicalContext: "Rich understanding of human anatomy.",
@@ -299,6 +318,7 @@ const REGIONS = {
       {
         id: "bone-setting",
         title: "Bone Setting",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/W._P._Hood%2C_On-bone_setting._Wellcome_L0002508.jpg/960px-W._P._Hood%2C_On-bone_setting._Wellcome_L0002508.jpg",
         timePeriod: "Ancient (India, China, Maya)",
         ancientUse: "Assess injuries via swelling, bruising, and movement tests. Use herbal ointment massage and herbal tea for recovery.",
         historicalContext: "Maya bone-setters soothe patients and inquire about injury details. Herbs shifted from wild collection to home cultivation.",
@@ -335,6 +355,7 @@ const REGIONS = {
       {
         id: "willow-bark",
         title: "Willow Bark",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Salicis1.JPG/960px-Salicis1.JPG",
         timePeriod: "3500 years ago (Sumerian & Egyptian)",
         ancientUse: "Used by Native Americans and ancient civilizations as a natural painkiller and anti-inflammatory. Active ingredient salicin converts to salicylic acid in the body.",
         historicalContext: "Ancient civilizations used willow bark primarily as a natural painkiller. Salicin is the exact precursor to modern aspirin.",
@@ -347,6 +368,7 @@ const REGIONS = {
       {
         id: "trepanation",
         title: "Trepanation",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Peter_Treveris_-_engraving_of_Trepanation_for_Handywarke_of_surgeri_1525.png/960px-Peter_Treveris_-_engraving_of_Trepanation_for_Handywarke_of_surgeri_1525.png",
         timePeriod: "Ancient (worldwide)",
         ancientUse: "Therapeutic trepanation to treat cranial fractures, mastoiditis, meningiomas, and leprosy. Cultural and symbolic trepanations done for religious or ritualistic reasons.",
         historicalContext: "Three main purposes proposed: therapeutic, cultural, and symbolic.",
