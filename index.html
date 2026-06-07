@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?56c233e9b131640e5b31a6f4722ff1b8";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Myth or Science | How ancient medicine work?</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="cover-page" aria-label="Ancient medicine cover page">
+      <svg class="cover-noise" aria-hidden="true">
+        <filter id="coverNoiseFilter">
+          <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="3" stitchTiles="stitch" />
+        </filter>
+        <rect width="100%" height="100%" filter="url(#coverNoiseFilter)"></rect>
+      </svg>
+
+      <svg class="cover-map" id="coverMap" viewBox="0 0 1000 500" aria-hidden="true">
+        <g id="coverMapLayer">
+          <path d="M154 98c45-38 112-44 164-20 33 15 47 42 37 71-8 25-34 37-55 52-22 16-28 38-23 65 7 39-18 76-58 81-45 6-74-24-90-60-14-31-45-48-62-76-22-37 11-83 87-113z" />
+          <path d="M241 285c25 17 51 47 54 82 3 38-21 73-42 102-27-27-48-70-47-109 0-31 13-56 35-75z" />
+          <path d="M428 106c39-20 103-25 150-15 41 8 56 34 38 62-16 24-58 19-82 39-28 22-10 55-23 85-12 28-50 34-79 21-25-11-38-36-33-63 5-29-25-48-20-79 3-20 20-36 49-50z" />
+          <path d="M504 224c34-11 71 6 90 39 22 38 15 96-16 136-31 39-81 43-108 8-24-31-18-78-2-111 12-26 10-58 36-72z" />
+          <path d="M574 121c62-41 181-35 270 13 49 26 68 64 42 91-28 30-87 17-128 35-43 19-45 61-86 77-47 19-95-10-103-57-6-37-45-58-48-94-2-25 17-47 53-65z" />
+          <path d="M791 318c35-17 91-2 117 31 25 32 6 67-30 68-41 1-75-31-93-67-7-13-5-25 6-32z" />
+        </g>
+      </svg>
+
+      <div class="cover-vignette" aria-hidden="true"></div>
+
+      <div class="cover-content">
+        <div class="cover-rule" aria-hidden="true"></div>
+        <h1 class="cover-title">Ancient Medicine</h1>
+        <p class="cover-kicker">Myths or Miracles?</p>
+        <div class="cover-sentences">
+          <p class="cover-sentence">
+            Have you ever wondered why drinking honey can mitigate a sore throat?
+            <button class="cover-inline-link" type="button" data-cover-link-region="egypt" data-cover-link-practice="honey">[Click]</button>
+          </p>
+          <p class="cover-sentence">
+            Or why applying lavender essential oil may treat minor wounds?
+            <button class="cover-inline-link" type="button" data-cover-link-region="arab" data-cover-link-practice="essential-oil">[Click]</button>
+          </p>
+          <p class="cover-sentence">In this map, we will explore whether ancient medical practices worldwide are scientifically effective...</p>
+          <p class="cover-sentence">...or just myths?</p>
+        </div>
+      </div>
+
+      <div class="cover-scroll-hint">↓ Scroll to explore ↓</div>
+    </section>
+
+    <section id="scroll-story" aria-label="Ancient civilizations scroll story">
+      <div class="story-sticky-map">
+        <svg id="storyMap" viewBox="0 0 1000 500" aria-hidden="true">
+          <path class="story-sphere" id="storySphere"></path>
+          <g class="story-graticule">
+            <path id="storyGraticule"></path>
+          </g>
+          <g class="story-country-layer" id="storyCountryLayer"></g>
+          <g class="story-marker-layer" id="storyMarkerLayer"></g>
+        </svg>
+        <div class="story-map-label" id="storyMapLabel">Ancient Greece</div>
+      </div>
+      <div class="story-chapters" id="storyChapters"></div>
+    </section>
+
+    <div class="story-to-map-transition">
+      <p>Now explore all regions on the interactive map</p>
+      <span aria-hidden="true">↓</span>
+    </div>
+
+    <header class="site-header">
+      <p class="eyebrow">Museum of Ancient Healing</p>
+      <h1><span>Myth or Science</span><span>How ancient medicine work?</span></h1>
+      <p class="map-label">ancient medicine map</p>
+      <p class="subtitle">
+        Select a map marker to open the ancient practices in this region and learn why it is effective, OR ineffective.
+      </p>
+    </header>
+
+    <main class="atlas-shell">
+      <section class="map-stage" aria-label="Interactive world map">
+        <div class="map-toolbar">
+          <button class="text-button admin-only" id="addRegionButton" type="button" hidden>+ Add Region</button>
+        </div>
+
+        <svg id="worldMap" viewBox="0 0 1000 500" role="img" aria-labelledby="mapTitle mapDesc">
+          <title id="mapTitle">World map with ancient medicine region markers</title>
+          <desc id="mapDesc">Click a colored marker to inspect medical practices from that region.</desc>
+          <defs>
+            <filter id="mapShadow" x="-20%" y="-20%" width="140%" height="140%">
+              <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#3b2a1a" flood-opacity="0.18" />
+            </filter>
+          </defs>
+
+          <path id="spherePath" class="sphere" aria-hidden="true"></path>
+          <g class="graticule" aria-hidden="true">
+            <path id="graticulePath"></path>
+          </g>
+          <g id="countryLayer" class="countries" filter="url(#mapShadow)" aria-hidden="true"></g>
+
+          <g id="markerLayer"></g>
+        </svg>
+        <div class="map-hint">Hover for region names. Click a marker to open the collection.</div>
+      </section>
+
+      <aside class="sidebar" id="sidebar" aria-hidden="true">
+        <div class="sidebar-header">
+          <div>
+            <p class="eyebrow">Regional Collection</p>
+            <h2 id="regionTitle">Select a region</h2>
+            <p id="regionSubtitle">Practices, context, and modern evaluation</p>
+            <span class="sidebar-bg-hint admin-only" hidden>Click header to upload background</span>
+          </div>
+          <input id="sidebarBgInput" class="sidebar-bg-input admin-only" type="file" accept="image/*" hidden />
+          <button class="icon-button" id="closeSidebar" type="button" aria-label="Close sidebar">✕</button>
+        </div>
+
+        <div class="practice-list" id="practiceList"></div>
+
+        <button class="sidebar-back-link" id="goBackStoryButton" type="button">← Go back</button>
+        <button class="primary-button admin-only" id="addPracticeButton" type="button" hidden>+ Add Practice</button>
+      </aside>
+    </main>
+
+    <section class="deepdive-section" aria-label="Deep Dive ancient acne treatments">
+      <div class="deepdive-causes">
+        <div class="deepdive-intro">
+          <p class="deepdive-label">Deep Dive</p>
+          <h2 class="deepdive-title">Ancient Acne Treatments Across Civilizations</h2>
+          <p>
+            For thousands of years, healers around the world discovered that essential oils
+            from plants may help treat acne.
+          </p>
+          <p>
+            <strong>Ancient Greece & the Arab World:</strong> Civilizations across the Mediterranean developed
+            rich traditions of using aromatic plants to treat skin conditions. Lavender, citrus,
+            myrtle, oregano, and thyme grew naturally in the region and became cornerstones of
+            healing practices. These oils are believed to reduce inflammation, prevent infection,
+            and help damaged skin heal.
+          </p>
+          <p>
+            <strong>Australian Aboriginal Traditions:</strong> They traditionally used tea tree oil for wound care,
+            disinfection, and skin healing. Modern science now suggests it may be one of the most
+            powerful natural acne fighters ever discovered.
+          </p>
+        </div>
+
+        <div class="deepdive-cause-stage">
+          <article class="deepdive-cause-panel deepdive-cause-visible" data-deepdive-cause="0">
+            <div class="deepdive-cause-copy">
+              <p class="deepdive-cause-question">What cause acnes?</p>
+              <p class="deepdive-cause-count">Cause 1 of 4</p>
+              <h3>Excessive Skin Oil Production</h3>
+              <p>
+                The sebaceous glands may secrete too much oil, which can clog pores easily.
+                The balance of fatty acids in sebum may also be disrupted.
+              </p>
+              <p class="deepdive-used-label">What ancient people used?</p>
+              <h4>Eucalyptus essential oil <span>(Australian tradition)</span></h4>
+              <p>
+                It is believed to work by shrinking overactive sebaceous glands and reducing
+                excess oil, making it a traditional choice for oil control.
+              </p>
+              <h4>Myrtle & Lemon essential oil <span>(Mediterranean tradition)</span></h4>
+              <p>
+                People in Southern Europe and North Africa have traditionally used them to
+                remove extra facial oil and help prevent clogged pores.
+              </p>
+              <p class="deepdive-suitable">Suitable for: Oily skin, acne caused by excess sebum, whiteheads and blackheads.</p>
+            </div>
+            <div class="deepdive-image-box">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Blausen_0811_SkinPores.png/960px-Blausen_0811_SkinPores.png" alt="Excessive skin oil production visual" />
+              <span>Paste image URL in src=""</span>
+            </div>
+          </article>
+
+          <article class="deepdive-cause-panel" data-deepdive-cause="1">
+            <div class="deepdive-cause-copy">
+              <p class="deepdive-cause-question">What cause acnes?</p>
+              <p class="deepdive-cause-count">Cause 2 of 4</p>
+              <h3>Buildup of Dead Skin Cells</h3>
+              <p>
+                Old skin cells may fail to shed normally and pile up inside pores,
+                potentially leading to blackheads and closed comedones.
+              </p>
+              <p class="deepdive-used-label">What ancient people used?</p>
+              <h4>Myrtle, Lavender & Lemon essential oil <span>(Mediterranean tradition)</span></h4>
+              <p>
+                People in Europe and West Asia have traditionally used these oils for facial
+                cleansing. They are thought to soften dead skin and help clear out debris
+                trapped in pores.
+              </p>
+              <h4>Tea tree essential oil <span>(Australian tradition)</span></h4>
+              <p>
+                Traditionally believed to penetrate pores to help dissolve hardened skin
+                plugs and improve comedones.
+              </p>
+              <p class="deepdive-suitable">Suitable for: Closed comedones, open blackheads and enlarged pores.</p>
+            </div>
+            <div class="deepdive-image-box">
+              <img src="https://www.verywellhealth.com/thmb/vwv_JSbB8Y4u3JxE02Gekq_2-wg=/2318x1739/filters:no_upscale():max_bytes(150000):strip_icc()/acne-001-bdc0402fa448416b85e95f1cbc5c9cea.JPG" alt="Dead skin cell buildup visual" />
+              <span>Paste image URL in src=""</span>
+            </div>
+          </article>
+
+          <article class="deepdive-cause-panel" data-deepdive-cause="2">
+            <div class="deepdive-cause-copy">
+              <p class="deepdive-cause-question">What cause acnes?</p>
+              <p class="deepdive-cause-count">Cause 3 of 4</p>
+              <h3>Overgrowth of Harmful Bacteria</h3>
+              <p>
+                Acne-causing bacteria such as Cutibacterium acnes, Staphylococcus epidermidis
+                and Staphylococcus aureus may multiply rapidly inside pores and trigger
+                inflamed, swollen pimples.
+              </p>
+              <p class="deepdive-used-label">What ancient people used?</p>
+              <h4>Tea tree essential oil <span>(Australian tradition)</span></h4>
+              <p>
+                Originally used by local people to clean wounds, it is believed to effectively
+                target acne-related bacteria. It is one of the most widely studied essential
+                oils for acne.
+              </p>
+              <h4>Oregano & Thyme essential oil <span>(Southern European tradition)</span></h4>
+              <p>
+                Rich in thymol and carvacrol, they are thought to fight bacteria and may help
+                break down bacterial biofilms, potentially useful for stubborn acne.
+              </p>
+              <p class="deepdive-suitable">Suitable for: Red bumps, pus-filled pimples, recurring acne.</p>
+            </div>
+            <div class="deepdive-image-box">
+              <img src="https://chec.uk/wp-content/uploads/2025/04/Acne-mild.png" alt="Acne bacteria overgrowth visual" />
+              <span>Paste image URL in src=""</span>
+            </div>
+          </article>
+
+          <article class="deepdive-cause-panel" data-deepdive-cause="3">
+            <div class="deepdive-cause-copy">
+              <p class="deepdive-cause-question">What cause acnes?</p>
+              <p class="deepdive-cause-count">Cause 4 of 4</p>
+              <h3>Skin Inflammation</h3>
+              <p>
+                Acne may lead to redness, swelling and soreness. Inflammation may also
+                leave behind red marks and dark spots on the skin.
+              </p>
+              <p class="deepdive-used-label">What ancient people used?</p>
+              <h4>Tea tree & Lavender essential oil <span>(used across regions)</span></h4>
+              <p>
+                Widely used in Australia and the Mediterranean area. They are believed to
+                help relieve swelling and support skin repair.
+              </p>
+              <h4>Lemon essential oil <span>(Mediterranean tradition)</span></h4>
+              <p>
+                Traditionally thought to reduce inflammation. Its main ingredient D-limonene
+                may help ease facial redness and support long-term skin health.
+              </p>
+              <p class="deepdive-suitable">Suitable for: Red, inflamed acne, post-acne marks and redness.</p>
+            </div>
+            <div class="deepdive-image-box">
+              <img src="https://gladskin.com/cdn/shop/articles/TEMPLATE-Blog_Header_4.jpg?v=1677712892" alt="Skin inflammation visual" />
+              <span>Paste image URL in src=""</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="deepdive-nav" aria-label="Acne cause navigation">
+          <button class="deepdive-arrow" type="button" data-deepdive-prev aria-label="Previous acne cause">←</button>
+          <span class="deepdive-counter" data-deepdive-cause-counter>1 / 4</span>
+          <button class="deepdive-arrow" type="button" data-deepdive-next aria-label="Next acne cause">→</button>
+        </div>
+      </div>
+
+      <div class="deepdive-products">
+        <div class="deepdive-products-intro">
+          <p class="deepdive-label">My Essential Oil Acne Creams</p>
+          <p>
+            Each cream is designed to target a different acne problem — bacteria, oil,
+            inflammation, or scarring. Formulated based on ancient healing traditions
+            and modern scientific research.
+          </p>
+          <p>Ancient healers discovered these plants. Modern science explored why they may work.</p>
+        </div>
+
+        <div class="deepdive-carousel" aria-label="Essential oil acne cream carousel">
+          <div class="deepdive-track" data-deepdive-track>
+            <article class="deepdive-product-card">
+              <div class="deepdive-product-image">
+                <img src="images/cream/tea-tree-lavender.webp" alt="Tea Tree and Lavender Blend cream" />
+                <span>Paste image URL in src=""</span>
+              </div>
+              <h3>Tea Tree + Lavender Blend</h3>
+              <p class="deepdive-tagline">"The most powerful combination."</p>
+              <p>
+                Tea tree may kill acne bacteria effectively; lavender is believed to soothe
+                inflammation and help prevent scars. Consider this if your acne is red,
+                inflamed, or persistent.
+              </p>
+              <div class="deepdive-chips"><span>Stubborn inflammatory acne</span><span>Acne that keeps coming back</span></div>
+            </article>
+
+            <article class="deepdive-product-card">
+              <div class="deepdive-product-image">
+                <img src="images/cream/tea-tree.webp" alt="Tea Tree Cream" />
+                <span>Paste image URL in src=""</span>
+              </div>
+              <h3>Tea Tree Cream</h3>
+              <p class="deepdive-tagline">"Strong antibacterial."</p>
+              <p>
+                Targets the bacteria that may cause acne, helps reduce pustules and papules,
+                and supports infection prevention. May help clear pores and aid healing.
+              </p>
+              <div class="deepdive-chips"><span>Active breakouts</span><span>Oily, bacterial acne</span></div>
+            </article>
+
+            <article class="deepdive-product-card">
+              <div class="deepdive-product-image">
+                <img src="images/cream/eucalyptus-cream.webp" alt="Eucalyptus Cream" />
+                <span>Paste image URL in src=""</span>
+              </div>
+              <h3>Eucalyptus Cream</h3>
+              <p class="deepdive-tagline">"Powerful oil regulator."</p>
+              <p>
+                May help shrink overactive sebaceous glands and reduce excess oil production.
+                Also traditionally thought to help fade acne marks.
+              </p>
+              <div class="deepdive-chips"><span>Very oily skin</span><span>Acne with comedones</span><span>Post-acne marks</span></div>
+            </article>
+
+            <article class="deepdive-product-card">
+              <div class="deepdive-product-image">
+                <img src="images/cream/oregano-cream.webp" alt="Oregano Cream" />
+                <span>Paste image URL in src=""</span>
+              </div>
+              <h3>Oregano Cream</h3>
+              <p class="deepdive-tagline">"The heavy hitter."</p>
+              <p>
+                Thought to fight resistant bacteria and help break down bacterial biofilms
+                that may keep acne coming back. May reduce swelling and nodules.
+              </p>
+              <div class="deepdive-chips"><span>Stubborn, recurring acne</span><span>Severe inflammatory acne</span><span>Cystic acne</span></div>
+            </article>
+
+            <article class="deepdive-product-card">
+              <div class="deepdive-product-image">
+                <img src="images/cream/thyme-cream.webp" alt="Thyme Cream" />
+                <span>Paste image URL in src=""</span>
+              </div>
+              <h3>Thyme Cream</h3>
+              <p class="deepdive-tagline">"Bacteria fighter."</p>
+              <p>
+                Believed to have strong antimicrobial properties against acne bacteria.
+                May help break down bacterial biofilms and reduce swelling and pain.
+              </p>
+              <div class="deepdive-chips"><span>Persistent acne</span><span>Painful, deep acne</span></div>
+            </article>
+
+            <article class="deepdive-product-card">
+              <div class="deepdive-product-image">
+                <img src="images/cream/lemon-cream.webp" alt="Lemon Cream" />
+                <span>Paste image URL in src=""</span>
+              </div>
+              <h3>Lemon Cream</h3>
+              <p class="deepdive-tagline">"Broad-spectrum fighter."</p>
+              <p>
+                May target multiple types of acne bacteria and help reduce inflammation.
+                Also thought to help with facial redness.
+              </p>
+              <div class="deepdive-chips"><span>Mixed acne types</span><span>Rosacea-like redness</span><span>Surface acne</span><span>Regular maintenance</span></div>
+            </article>
+          </div>
+        </div>
+
+        <div class="deepdive-nav deepdive-product-nav" aria-label="Product carousel navigation">
+          <button class="deepdive-arrow" type="button" data-deepdive-product-prev aria-label="Previous product">←</button>
+          <span class="deepdive-counter" data-deepdive-product-counter>1 / 6</span>
+          <button class="deepdive-arrow" type="button" data-deepdive-product-next aria-label="Next product">→</button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="creator-credit">created by Elan Zhu</div>
+    </footer>
+
+    <div class="modal" id="formModal" aria-hidden="true">
+      <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-header">
+          <h2 id="modalTitle">Edit entry</h2>
+          <button class="icon-button" id="closeModal" type="button" aria-label="Close form">✕</button>
+        </div>
+        <form id="entryForm" class="entry-form">
+          <div id="formFields"></div>
+          <div class="form-actions">
+            <button class="secondary-button" id="cancelForm" type="button">Cancel</button>
+            <button class="primary-button" type="submit">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <section id="subscribe-section">
+      <div class="subscribe-inner">
+        <p class="subscribe-label">STAY CURIOUS</p>
+        <h2 class="subscribe-title">Want to know more about ancient medicine?</h2>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>
+    <script src="data.js"></script>
+    <script src="cover.js"></script>
+    <script src="app.js"></script>
+    <script src="story.js"></script>
+    <script src="deepdive.js"></script>
+  </body>
+</html>
