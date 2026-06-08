@@ -121,17 +121,16 @@
       <div class="dq-rule" aria-hidden="true"></div>
       <p class="dq-practice-line">${escapeHtml(dailyPractice.title)} — ${escapeHtml(dailyPractice.regionName)}</p>
       <p class="dq-explanation">${escapeHtml(dailyPractice.modernEvaluation || dailyPractice.ancientUse || "No explanation is available yet.")}</p>
-      ${sourceMarkup(dailyPractice.source)}
+      ${sourceMarkup(dailyPractice)}
       <p class="dq-tomorrow">A new clue unlocks tomorrow.</p>
     `;
     requestAnimationFrame(() => els.result.classList.add("dq-result-visible"));
   }
 
-  function sourceMarkup(source) {
-    if (!source) return "";
-    const safeSource = escapeHtml(source);
-    const href = /^https?:\/\//i.test(source) ? safeSource : "#";
-    return `<p class="dq-source"><a href="${href}" target="_blank" rel="noreferrer">Read the source</a></p>`;
+  function sourceMarkup(practice) {
+    const query = encodeURIComponent(`${practice.title} ${practice.regionName} medicine`);
+    const href = `https://www.britannica.com/search?query=${query}`;
+    return `<p class="dq-source"><a href="${href}" target="_blank" rel="noreferrer">Explore on Britannica</a></p>`;
   }
 
   function readStoredAnswer() {
